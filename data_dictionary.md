@@ -17,3 +17,4 @@ Possible values for alpha_index include:
 - about (string): Description of the teacher. [longest length allowed?]
 - image_url (string): Full web address for the teacher's image. [Are they always hosted on Insight Timer's website?]
 - scrape_date (date_time): The date the teacher's information was scraped from their individual page on Insight Timer's website.
+- scrape_status: Possible values are 'page not found', 'name not found', and 'name found'.
