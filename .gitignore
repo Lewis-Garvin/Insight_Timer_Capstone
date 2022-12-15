@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # data and working folders
-data/working
+data/
 working/
