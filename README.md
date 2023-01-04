@@ -5,6 +5,7 @@ An analysis of guided meditations and teachers on the Insight Timer app for my N
 - [Motivation](#motivation)
 - [Data Questions](#data-questions)
 - [Data Source](#data-source)
+- [Analysis and Data Visualizations](#analysis-and-data-visualizations)
 - [Installation](#installation)
 - [Usage](#usage)
 
@@ -21,6 +22,8 @@ I have a personal interest in this topic as someone who has been learning and pr
 - What types of guided meditations are available and popular on Insight Timer?
 - What are the characteristics of popular guided meditations and successful meditation teachers? (A key metric is the number of times a meditation is played. Insight Timer distributes a percentage of their revenue to teachers based in part on their total number of plays.)
 - What opportunities are there for new teachers to find an audience for their guided meditations on Insight Timer?
+
+
 
 ## Data Source
 The data source is Insight Timer’s website (https://insighttimer.com/), which has structured information available for their guided meditations and meditation teachers. This data is collected by web scraping using Python and Selenium.
@@ -50,6 +53,11 @@ Example page: https://insighttimer.com/jackkornfield/guided-meditations/breathin
 - Description
 
 As of January 5, 2022, data has been successfully collected for all meditation teachers and about 60,000 guided meditations.
+
+## Analysis and Data Visualizations
+A Google Slides presentation summarizing the findings of this project may be found here:
+https://docs.google.com/presentation/d/1eHlNvPp8X6wVc52N4GmQEQnC_GQZcu9EmH5Da51aFPE/edit?usp=sharing <br>
+Talking points for each slide will also be made available soon.
 
 # Installation
 Note: The web scraping in this project works with the Insight Timer website (https://insighttimer.com/) as of December 2022. Future changes to the Insight Timer website may be incompatible with this project, which will need to be updated to accommodate those changes.
