@@ -4,8 +4,7 @@ An analysis of guided meditations and teachers on the Insight Timer app for my N
 ## Table of Contents
 - [Motivation](#motivation)
 - [Data Questions](#data-questions)
-- [Data Sources and Tools](#data-sources-and-tools)
-- [The Process](#the-Process)
+- [Data Source](#data-source)
 - [Installation](#installation)
 - [Usage](#usage)
 
@@ -24,36 +23,33 @@ I have a personal interest in this topic as someone who has been learning and pr
 - What opportunities are there for new teachers to find an audience for their guided meditations on Insight Timer?
 
 ## Data Source
-The data source is Insight Timer’s website (https://insighttimer.com/), which has structured information available for their guided meditations and meditation teachers. This data is collecting by web scraping using Python and Selenium.
+The data source is Insight Timer’s website (https://insighttimer.com/), which has structured information available for their guided meditations and meditation teachers. This data is collected by web scraping using Python and Selenium.
 
-Meditation Teachers (~16,000)
-Example page: https://insighttimer.com/jackkornfield
-Columns
-•	Name
-•	Location
-•	Followers
-•	Languages
-•	Date Joined
-•	About
-•	Image url
+Meditation Teachers (~16,000) <br>
+Example page: https://insighttimer.com/jackkornfield  <br>
+Columns: <br>
+- Name
+- Location
+- Followers
+- Languages
+- Date Joined
+- About
+- Image url
 
-Guided Meditations (~160,000)
-Example page: https://insighttimer.com/jackkornfield/guided-meditations/breathing-meditation
-•	Title
-•	Teacher
-•	Length
-•	Number of plays
-•	Average Rating
-•	Number of reviews
-•	Type: ‘Guided’, ‘Talks’, or ‘Music’
-•	Suitable for: ‘Beginners’, ‘Everyone’, etc.
-•	Topics: Multiple tags/keywords from list of over 200 topics.
-•	Description
+Guided Meditations (~160,000)  <br>
+Example page: https://insighttimer.com/jackkornfield/guided-meditations/breathing-meditation  <br>
+- Title
+- Teacher
+- Length
+- Number of plays
+- Average Rating
+- Number of reviews
+- Type: ‘Guided’, ‘Talks’, or ‘Music’
+- Suitable for: ‘Beginners’, ‘Everyone’, etc.
+- Topics: Multiple tags/keywords from list of over 200 topics.
+- Description
 
-## The Process
-Web scraping all meditation teachers and about 60,000 meditations.
-
-All meditation teachers
+As of January 5, 2022, data has been successfully collected for all meditation teachers and about 60,000 guided meditations.
 
 # Installation
 Note: The web scraping in this project works with the Insight Timer website (https://insighttimer.com/) as of December 2022. Future changes to the Insight Timer website may be incompatible with this project, which will need to be updated to accommodate those changes.
@@ -84,7 +80,7 @@ Create the following subdirectories within your local project directory:
 - /data/teacher_batch_files
 
 # Usage
-The eight notebooks in this project are used to scrape data from Insight Timer's website, cleanse the resulting data, and finally to analyze it by creating data visualizations. The table below shows the dependencies among the notebooks and the data files they read and create. Most of the scraping notebooks process and save their results in batches; each of these notebooks can be run multiple times to process a subset of batches.
+The eight notebooks in this project are used to scrape data from Insight Timer's website, cleanse the resulting data, and finally to analyze it by creating data visualizations using the Python libraries matplotlib, seaborn, and Plotly. The table below shows the dependencies among the notebooks and the data files they read and create. Most of the scraping notebooks process and save their results in batches; each of these notebooks can be run multiple times to process a subset of batches.
 
 | Group | Notebook | Dependencies | Data Files Read | Data Files Created |
 | :----: | :----: | :----: | :----: | :----: |
