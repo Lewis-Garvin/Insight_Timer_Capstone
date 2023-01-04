@@ -1,4 +1,4 @@
-# insight_timer_capstone
+# Insight Timer Capstone Project
 An analysis of guided meditations and teachers on the Insight Timer app for my NSS Data Analytics capstone project
 
 ## Table of Contents
