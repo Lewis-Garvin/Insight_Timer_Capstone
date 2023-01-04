@@ -1,7 +1,14 @@
 # insight_timer_capstone
-An analysis of guided meditations and teachers on the Insight Timer app for my NSS Data Analytics capstone project
+Running the scraping and cleansing notebooks create five final data files used for the final analysis and visualizations:
+- teachers_df.csv
+- teachers_languges_df.csv
+- meditations_df.csv
+- meditations_topics_df.csv
+- topics_df.csv
 
-Teacher Columns
+Included below are notes for each column in these data files.
+
+Teachers (teachers_df.csv)
 - teacher_id (string): A unique value for each teacher than can be used as an identifier. A concatenation of https://insighttimer.com/ and teacher_id results in the complete url for the teacher's page on Insight Timer.
 - alpha_index (string): The teacher's category in the Teachers Directory, based on the first character in the teacher's name as it appears in the directory (dir_teacher_name). The url for the directory page that contains the teacher is the concatenation of https://insighttimer.com/dir/meditation-teachers/ and the alpha_index.
 Possible values for alpha_index include:
@@ -17,3 +24,11 @@ Possible values for alpha_index include:
 - image_url (string): Full web address for the teacher's image. [Are they always hosted on Insight Timer's website?]
 - scrape_date (date_time): The date the teacher's information was scraped from their individual page on Insight Timer's website.
 - scrape_status: Possible values are 'page not found', 'name not found', and 'name found'.
+
+Teachers Languages (teachers_langauges_df.csv)
+
+Meditations (meditations_df.csv)
+
+Meditations Topics (meditations_topics_df.csv)
+
+Topics (topics_df.csv)
