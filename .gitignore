@@ -131,3 +131,4 @@ dmypy.json
 # data and working folders
 data/
 working/
+tableau/
