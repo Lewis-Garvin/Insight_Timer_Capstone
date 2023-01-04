@@ -1,84 +1,62 @@
 # insight_timer_capstone
 An analysis of guided meditations and teachers on the Insight Timer app for my NSS Data Analytics capstone project
 
-
-
-
-https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
-https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
-https://towardsdatascience.com/how-to-write-an-awesome-readme-68bf4be91f8b
-
-
-<!-- Add banner here -->
-
-# Project Title
-
-<!-- Add buttons here -->
-
-<!-- Describe your project in brief -->
-
-<!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
-Add a cover/banner image for your README. **Why?** Because it easily **grabs people's attention** and it **looks cool**(*duh!obviously!*).
-The best dimensions for the banner is **1280x650px**. You could also use this for social preview of your repo.
-I personally use [**Canva**](https://www.canva.com/) for creating the banner images. All the basic stuff is **free**(*you won't need the pro version in most cases*).
-There are endless badges that you could use in your projects. And they do depend on the project. Some of the ones that I commonly use in every projects are given below.
-I use [**Shields IO**](https://shields.io/) for making badges. It is a simple and easy to use tool that you can use for almost all your badge cravings. -->
-
-<!-- Some badges that you could use -->
-
-<!-- ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)
-: This badge shows the version of the current release.
-![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
-: I think it is self-explanatory. This gives people an idea about how the project is being maintained.
-![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
-: This is a dynamic badge from [**Shields IO**](https://shields.io/) that tracks issues in your project and gets updated automatically. It gives the user an idea about the issues and they can just click the badge to view the issues.
-![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
-: This is also a dynamic badge that tracks pull requests. This notifies the maintainers of the project when a new pull request comes.
-![GitHub All Releases](https://img.shields.io/github/downloads/navendu-pottekkat/awesome-readme/total): If you are not like me and your project gets a lot of downloads(*I envy you*) then you should have a badge that shows the number of downloads! This lets others know how **Awesome** your project is and is worth contributing to.
-![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
-: This shows what kind of open-source license your project uses. This is good idea as it lets people know how they can use your project for themselves.
-![Tweet](https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https%3A%2F%2Fnavendu.me%2Fnsfw-filter%2Findex.html): This is not essential but it is a cool way to let others know about your project! Clicking this button automatically opens twitter and writes a tweet about your project and link to it. All the user has to do is to click tweet. Isn't that neat? -->
-
-# Demo-Preview
-
-<!-- Add a demo for your project -->
-
-<!-- After you have written about your project, it is a good idea to have a demo/preview(**video/gif/screenshots** are good options) of your project so that people can know what to expect in your project. You could also add the demo in the previous section with the product description.
-Here is a random GIF as a placeholder.
-![Random GIF](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif) -->
-
-# Table of contents
-
-<!-- After you have introduced your project, it is a good idea to add a **Table of contents** or **TOC** as **cool** people say it. This would make it easier for people to navigate through your README and find exactly what they are looking for.
-Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README. -->
-
-- [Project Title](#project-title)
-- [Demo-Preview](#demo-preview)
-- [Table of contents](#table-of-contents)
+## Table of Contents
+- [Motivation](#motivation)
+- [Data Questions](#data-questions)
+- [Data Sources and Tools](#data-sources-and-tools)
+- [The Process](#the-Process)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Development](#development)
-- [Contribute](#contribute)
-    - [Sponsor](#sponsor)
-    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
-- [License](#license)
-- [Footer](#footer)
+
+## Motivation
+Insight Timer is the world’s largest free, openly accessible library of guided meditations. Unlike most other meditation apps, which offer a limited set of curated guided meditations, Insight Timer is an open platform on which anyone may join as a meditation teacher offering meditations of any and all varieties. Insight Timer shares a portion of their premium membership revenues with their teachers, so it is becoming a source of supplemental income for a variety of meditation and yoga teachers, musicians, and others.
+
+Despite Insight Timer’s openness and flexibility, they store and present information about their teachers and guided meditations in a very structured form specific to the domain. Most of this information is available on their website outside of the app. I have not found a comparable dataset for a large number of guided meditations or teachers.
+
+What could Insight Timer’s database of information on teachers and meditations tell us about what meditation looks like today and how it is changing?
+
+I have a personal interest in this topic as someone who has been learning and practicing meditation for the past seven years at Wild Heart Meditation Center in Nashville.
+
+## Data Questions
+- What types of guided meditations are available and popular on Insight Timer?
+- What are the characteristics of popular guided meditations and successful meditation teachers? (A key metric is the number of times a meditation is played. Insight Timer distributes a percentage of their revenue to teachers based in part on their total number of plays.)
+- What opportunities are there for new teachers to find an audience for their guided meditations on Insight Timer?
+
+## Data Source
+The data source is Insight Timer’s website (https://insighttimer.com/), which has structured information available for their guided meditations and meditation teachers. This data is collecting by web scraping using Python and Selenium.
+
+Meditation Teachers (~16,000)
+Example page: https://insighttimer.com/jackkornfield
+Columns
+•	Name
+•	Location
+•	Followers
+•	Languages
+•	Date Joined
+•	About
+•	Image url
+
+Guided Meditations (~160,000)
+Example page: https://insighttimer.com/jackkornfield/guided-meditations/breathing-meditation
+•	Title
+•	Teacher
+•	Length
+•	Number of plays
+•	Average Rating
+•	Number of reviews
+•	Type: ‘Guided’, ‘Talks’, or ‘Music’
+•	Suitable for: ‘Beginners’, ‘Everyone’, etc.
+•	Topics: Multiple tags/keywords from list of over 200 topics.
+•	Description
+
+## The Process
+Web scraping all meditation teachers and about 60,000 meditations.
+
+All meditation teachers
 
 # Installation
-[(Back to top)](#table-of-contents)
-
-<!-- *You might have noticed the **Back to top** button(if not, please notice, it's right there!). This is a good idea because it makes your README **easy to navigate.***
-The first one should be how to install(how to generally use your project or set-up for editing in their machine).
-This should give the users a concrete idea with instructions on how they can use your project repo with all the steps.
-Following this steps, **they should be able to run this in their device.**
-A method I use is after completing the README, I go through the instructions from scratch and check if it is working. -->
-
-<!-- Here is a sample instruction:
-To use this project, first clone the repo on your device using the command below:
-```git init```
-```git clone https://github.com/navendu-pottekkat/nsfw-filter.git``` -->
-
-The web scraping in this project works with the Insight Timer website (https://insighttimer.com/) as of December 2022. Future changes to the Insight Timer website may be incompatible with this project, which will need to be updated to accomodate those changes.
+Note: The web scraping in this project works with the Insight Timer website (https://insighttimer.com/) as of December 2022. Future changes to the Insight Timer website may be incompatible with this project, which will need to be updated to accommodate those changes.
 
 To use this project, you will need to have the following Python libraries installed:
 - bs4
@@ -106,120 +84,15 @@ Create the following subdirectories within your local project directory:
 - /data/teacher_batch_files
 
 # Usage
-[(Back to top)](#table-of-contents)
+The eight notebooks in this project are used to scrape data from Insight Timer's website, cleanse the resulting data, and finally to analyze it by creating data visualizations. The table below shows the dependencies among the notebooks and the data files they read and create. Most of the scraping notebooks process and save their results in batches; each of these notebooks can be run multiple times to process a subset of batches.
 
-<!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
-
-
-
-| Notebook | Dependencies | Data Files Read | Data Files Created |
-| :----: | :----: | :----: | :----: |
-| scrape_teacher_list.ipynb | None | None (web scraping only) | teachers_list_df.csv |
-
-
-Notebooks
-- scrape_teacher_list.ipynb
-  - Creates teachers_list_df.csv
-
-
-- scrape_teacher_detail.ipynb
-  - Read in teachers_list_df.csv, teachers_batch_list.csv
-  - Creates teachers_batch_list.csv
-  - Creates batch files in teacher_batch_files subdirectory
-- cleansing_teacher.ipynb
-  - Reads in batch files in teacher_batch_files subdirectory
-  - Creates teachers_df.csv, teachers_languages_df.csv
-- cleansing_locationtagger.ipynb
-  - Reads in teachers_df.csv
-  - Updates teachers_df.csv, adding city and country columns
-
-- scrape_meditation_list.ipynb
-  - Reads in teachers_list_df.csv, med_list_batches.csv
-  - Creates med_list_batches.csv
-  - Creates batch files in med_list_batch_files subdirectory
-- scrape_meditation_detail.ipynb
-  - Reads in batch files in med_list_batch_files subdirectory
-  - Creates med_detail_batch.csv
-  - Creates batch files in med_detail_batch_files subdirectory
-  - Reads in med_detail_batch_df.csv
-- cleansing_meditations.ipynb
-  - Reads in batch files in med_detail_batch_files subdirectory
-  - Creates meditations_df, meditations_topics_df.csv, topics_df.csv
-
-- analysis_and_visualizations.ipynb
-  - Reads in teachers_df.csv, teachers_languages_df.csv, meditations_df.csv, topics_df.csv, meditations_topics_df.csv
-
-Final Data Files
-teachers_df.csv
-teachers_languages_df.csv
-meditations_df.csv
-topics_df.csv
-meditations_topics_df.csv
-
-
-Robots.txt for Insight
-https://insighttimer.com/robots.txt
-
-# Development
-[(Back to top)](#table-of-contents)
-
-<!-- This is the place where you give instructions to developers on how to modify the code.
-You could give **instructions in depth** of **how the code works** and how everything is put together.
-You could also give specific instructions to how they can setup their development environment.
-Ideally, you should keep the README simple. If you need to add more complex explanations, use a wiki. Check out [this wiki](https://github.com/navendu-pottekkat/nsfw-filter/wiki) for inspiration. -->
-
-# Contribute
-[(Back to top)](#table-of-contents)
-
-<!-- This is where you can let people know how they can **contribute** to your project. Some of the ways are given below.
-Also this shows how you can add subsections within a section. -->
-
-### Sponsor
-[(Back to top)](#table-of-contents)
-
-<!-- Your project is gaining traction and it is being used by thousands of people(***with this README there will be even more***). Now it would be a good time to look for people or organisations to sponsor your project. This could be because you are not generating any revenue from your project and you require money for keeping the project alive.
-You could add how people can sponsor your project in this section. Add your patreon or GitHub sponsor link here for easy access.
-A good idea is to also display the sponsors with their organisation logos or badges to show them your love!(*Someday I will get a sponsor and I can show my love*) -->
-
-### Adding new features or fixing bugs
-[(Back to top)](#table-of-contents)
-
-<!-- This is to give people an idea how they can raise issues or feature requests in your projects.
-You could also give guidelines for submitting and issue or a pull request to your project.
-Personally and by standard, you should use a [issue template](https://github.com/navendu-pottekkat/nsfw-filter/blob/master/ISSUE_TEMPLATE.md) and a [pull request template](https://github.com/navendu-pottekkat/nsfw-filter/blob/master/PULL_REQ_TEMPLATE.md)(click for examples) so that when a user opens a new issue they could easily format it as per your project guidelines.
-You could also add contact details for people to get in touch with you regarding your project. -->
-
-# License
-[(Back to top)](#table-of-contents)
-
-<!-- Adding the license to README is a good practice so that people can easily refer to it.
-Make sure you have added a LICENSE file in your project folder. **Shortcut:** Click add new file in your root of your repo in GitHub > Set file name to LICENSE > GitHub shows LICENSE templates > Choose the one that best suits your project!
-I personally add the name of the license and provide a link to it like below. -->
-
-[GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
-
-# Footer
-[(Back to top)](#table-of-contents)
-
-<!-- Let's also add a footer because I love footers and also you **can** use this to convey important info.
-Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke). -->
-
-Leave a star in GitHub, give a clap in Medium and share this guide if you found this helpful.
-
-<!-- Add the footer here -->
-
-<!-- ![Footer](https://github.com/navendu-pottekkat/awesome-readme/blob/master/fooooooter.png) -->
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+| Group | Notebook | Dependencies | Data Files Read | Data Files Created |
+| :----: | :----: | :----: | :----: | :----: |
+| Teacher List | scrape_teacher_list.ipynb | None | None (web scraping only) | teachers_list_df.csv |
+| Teacher Detail | scrape_teacher_detail.ipynb | Run after scrape_teacher_list.ipynb | teachers_list_df.csv, teachers_batch_list.csv | teachers_batch_list.csv, batch files in /data/teacher_batch_files |
+| Teacher Detail | cleansing_teacher.ipynb | Run after scrape_teacher_detail.ipynb | batch files in /data/teacher_batch_files | teachers_df.csv, teachers_languages_df.csv |
+| Teacher Detail | cleansing_locationtagger.ipynb | Run after cleansing_teacher.ipynb | teachers_df.csv | Updates teachers_df.csv, adding city and country columns |
+| Meditations | scrape_meditation_list.ipynb | Run after scrape_teacher_list.ipynb; Can run before Teacher Detail group | teachers_list_df.csv, med_list_batches.csv | med_list_batches.csv, batch files in /data/med_list_batch_files |
+| Meditations | scrape_meditation_detail.ipynb | Run after scrape_meditation_list.ipynb | med_detail_batch_df.csv, batch files in /data/med_list_batch_files | med_detail_batch.csv, batch files in /data/med_detail_batch_files |
+| Meditations | cleansing_meditations.ipynb | Run after scrape_meditation_detail.ipynb | batch files in /data/med_detail_batch_files | meditations_df, meditations_topics_df.csv, topics_df.csv |
+| Analysis | analysis_and_visualizations.ipynb | Run after all other groups/notebooks | teachers_df.csv, teachers_languages_df.csv, meditations_df.csv, topics_df.csv, meditations_topics_df.csv |
